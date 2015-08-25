@@ -125,7 +125,7 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
 */
 
 var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
-var nextAnimal = favoriteAnimals[Math.floor((Math.random() * 4) + 1)];
+var nextAnimal = favoriteAnimals[Math.floor(Math.random() * 4)];
 
 // TODO: 12 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
