@@ -104,9 +104,11 @@ for (var i = 0; i < sentence1.split(' ').length; i += 1) {
 // with 'chirp' (10 points)
 
 // your code goes here
-while (sentence2 !== 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.') {
+var nineChirps = 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.';
+var eightChirps = 'chirp chirp chirp chirp chirp chirp chirp chirp chirp';
+while (sentence2 !== nineChirps) {
   sentence2 = sentence2.split(' ');
-  if (sentence2.join(' ') === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp') {
+  if (sentence2.join(' ') === eightChirps) {
     sentence2.push('chirp.');
     sentence2.shift();
   } else {
@@ -131,13 +133,13 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
 */
 
 var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
-var nextAnimal = favoriteAnimals[Math.floor(Math.random() * 4)];
+var nextAnimal;
 
 // TODO: 12 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
 // your code goes here
-
+nextAnimal = favoriteAnimals[Math.floor(Math.random() * 4)];
 assert(nextAnimal, 'assign something to nextAnimal');
 
 /* ===================================================================
