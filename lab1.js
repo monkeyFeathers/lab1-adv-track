@@ -33,6 +33,12 @@ function assert(expression, failureMessage) {
   }
 }
 
+function assertFail(expression, failureMessage) {
+  if (expression) {
+    console.log('assertion passed: ', failureMessage);
+  }
+}
+
 /*
  An assertion is something we expect to be true about the state of the
  program at the point where the assertion is made.
@@ -44,7 +50,7 @@ function assert(expression, failureMessage) {
 */
 var one = 1;
 assert(one === 1, '1 equals 1 - this assert will pass.');
-assert(one === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
+assertFail(one === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
 
 /* ===========================================================================
 ------------------Assertions (8 points total)---------------------------------
@@ -62,7 +68,7 @@ var cheetah = new Object({speed:75, manuverability:7});
 var gazelle = new Object({speed:30, manuverability:10});
 
 assert(cheetah.speed > gazelle.speed, 'he cheetah is faster than the gazelle');
-assert(cheetah.manuverability > gazelle.manuverability, 'Assertion failed because gazelles are more manuverable than cheetahs (that\'s why they sometimes get away).');
+assertFail(cheetah.manuverability > gazelle.manuverability, 'Assertion failed because gazelles are more manuverable than cheetahs (that\'s why they sometimes get away).');
 
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
